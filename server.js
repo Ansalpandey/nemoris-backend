@@ -22,6 +22,10 @@ app.use("/api/user", userRouter);
 app.use("/api/admin", adminRouter);
 app.use("/api/doctor", doctorRouter);
 
+app.get("/", (req, res) => {
+  res.send("Welcome to the Nemoris API platform!");
+});
+
 app.get("/status", (req, res) => {
   const lastUpdated = new Date().toUTCString();
 
